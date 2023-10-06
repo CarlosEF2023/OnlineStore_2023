@@ -1,0 +1,43 @@
+Caso Práctico
+Online Store es una empresa que se dedica a la venta de productos a través de comercio electrónico y necesita implementar una aplicación para gestionar las ventas de la empresa.
+Nuestra empresa ha sido seleccionada para desarrollar una aplicación de escritorio basada en Java que se ejecutará en el backend como alternativa a la aplicación web.
+Los datos que se gestionaran en la aplicación se dividen en clientes, artículos y pedidos.
+
+Clientes
+Los datos que se almacenarán de cada cliente serán el nombre, domicilio, nif y email, siendo el email el identificador del cliente. Existen dos tipos de clientes:
+
+  Estándar. No paga ninguna cuota.
+  Paga una cuota anual de 30 euros y se le aplica un 20% de descuento en los gastos de envío de cada pedido.
+
+Artículos
+Los datos básicos de los artículos son un código alfanumérico, una descripción y el precio de venta, gastos de envío y un tiempo de preparación para el envío representado en minutos.
+
+Pedidos
+Para simplificar la aplicación se considerará que cada pedido solo puede contener un artículo, aunque se puedan pedir varias unidades de este.
+Los datos necesarios para cada pedido son el número de pedido, cliente, el artículo, la cantidad de unidades del artículo y la fecha y hora del pedido.
+Un pedido no se puede ser cancelado una vez transcurrido el tiempo de preparación para el envío del articulo a partir de la fecha del pedido.
+Para calcular el precio del pedido hay que tener en cuenta el precio de venta, las unidades pedidas, el coste del envío y si el cliente que lo ha realizado es premium.
+
+Requisitos funcionales:
+Se pretende crear un sistema de información que modele una tienda online que recoja las especificaciones que se han indicado en apartado anterior siguiendo un paradigma de programación orientada a objectos.
+La aplicación debe implementar un menú de opciones con las funcionalidades siguientes:
+  Gestión Artículos:
+  Añadir Articulo
+  Mostrar Artículos
+  Gestión de Clientes
+  Añadir Clientes
+  Mostrar Clientes
+  Mostrar Clientes Estándar
+  Mostrar Clientes Premium
+  Gestión de Pedidos
+  Añadir Pedido. En caso de que al pedir los datos del pedido el cliente no existe, es decir, se trata de un nuevo cliente, se deben pedir los datos del nuevo cliente y se añadirá a la lista de clientes. El articulo en el momento de añadir un pedido debe existir.
+  Eliminar Pedido. Un pedido puede ser borrado únicamente si no ha sido enviado, es decir, si el tiempo transcurrido a desde la fecha y hora del pedido no supera el tiempo de preparación para el envío del artículo.
+  Mostar pedidos pendientes de envío con la opción de filtrar por cliente.
+  Mostrar pedidos enviados con la opción de filtrar por cliente.
+ 
+
+FASE 1: Diseño del modelo estático. Es en esta fase se realizarán los diagramas de clases y de casos de uso a partir de los requisitos funcionales del caso práctico.
+FASE 2: Implementación del modelo estático de clases en lenguaje Java. En esta fase se deberá implementar la mayor parte de la lógica de la aplicación aplicando el patrón MVC. La interacción con la aplicación será en modo consola almacenando los datos en estructuras dinámicas, además se debe tener en cuenta la gestión correcta de excepciones.
+FASE 3: En esta fase se utilizará JDBC para realizar todas las operaciones necesarias con la BD. Se utiliza el SGBD MySQL para realizar la persistencia. Se tiene que aplicar el patrón DAO, transacciones y procedimientos almacenados.
+FASE 4: En esta fase se cambiará el tipo de la programación de la persistencia, implementando la aplicación con mapeo ORM.
+FASE 5: En esta fase se implementará la aplicación usando una interfaz gráfica mediante JavaFX.
