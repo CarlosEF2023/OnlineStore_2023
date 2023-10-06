@@ -1,4 +1,4 @@
-Caso Práctico
+uCaso Práctico
 Online Store es una empresa que se dedica a la venta de productos a través de comercio electrónico y necesita implementar una aplicación para gestionar las ventas de la empresa.
 Nuestra empresa ha sido seleccionada para desarrollar una aplicación de escritorio basada en Java que se ejecutará en el backend como alternativa a la aplicación web.
 Los datos que se gestionaran en la aplicación se dividen en clientes, artículos y pedidos.
@@ -7,7 +7,7 @@ Clientes
 Los datos que se almacenarán de cada cliente serán el nombre, domicilio, nif y email, siendo el email el identificador del cliente. Existen dos tipos de clientes:
 
   Estándar. No paga ninguna cuota.
-  Paga una cuota anual de 30 euros y se le aplica un 20% de descuento en los gastos de envío de cada pedido.
+  Premium. Paga una cuota anual de 30 euros y se le aplica un 20% de descuento en los gastos de envío de cada pedido.
 
 Artículos
 Los datos básicos de los artículos son un código alfanumérico, una descripción y el precio de venta, gastos de envío y un tiempo de preparación para el envío representado en minutos.
